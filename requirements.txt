@@ -1,2 +1,7 @@
-
-pillow
+matplotlib
+streamlit
+re
+typing
+random
+math
+dataclasses

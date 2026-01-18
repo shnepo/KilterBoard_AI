@@ -62,7 +62,7 @@ def draw_route_thumbnail(route: Route, board_data: dict) -> plt.Figure:
     return fig
 
 # --- SIDEBAR: INPUTS ---
-st.sidebar.title("KilterGen AI 🍌")
+st.sidebar.title("KilterGen AI")
 st.sidebar.subheader("Route Parameters")
 
 diff_input = st.sidebar.selectbox(
@@ -89,7 +89,7 @@ st.sidebar.write("---")
 
 # Main action buttons
 if st.session_state['generation_count'] == 0 and len(st.session_state['population']) == 0:
-    if st.sidebar.button("🚀 Generate First Population", use_container_width=True, type="primary"):
+    if st.sidebar.button("Generate First Population", use_container_width=True, type="primary"):
         gen = st.session_state['generator']
         st.session_state['population'] = gen.init_population(difficulty_val, style_params)
         st.session_state['generation_count'] = 1
